@@ -6,7 +6,7 @@ import RequestContext from '../http/RequestContext';
 
 export function createRequestProcessor(app) {
     const error = function(request, response, status, error) {
-        if (!error.code) {
+        if (!error.status) {
             error = new HttpError(
                 error && error.status || status,
                 error && error.message || error,
