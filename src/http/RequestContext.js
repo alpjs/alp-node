@@ -18,7 +18,7 @@ export default class RequestContext {
             controllerName = route.controller;
         }
 
-        const controller = this.app.controllers.get(route.controller);
+        const controller = this.app.controllers.get(controllerName);
         if (!controller) {
             return this.response.notFound(undefined, 'Controller not found: ' + controllerName);
         }
@@ -26,7 +26,7 @@ export default class RequestContext {
         const action = controller[actionName];
         if (!action/* || !action.isAction*/) {
             return this.response.notFound(undefined, 'Action not found: ' +
-                         route.controller + '.' + route.action);
+                         controllerName + '.' + actionName);
         }
 
         try {
