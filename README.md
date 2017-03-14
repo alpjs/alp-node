@@ -1,5 +1,7 @@
 # alp-node [![NPM version][npm-image]][npm-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/alpjs/alp-node.svg)](https://greenkeeper.io/)
+
 framework based on koa 2
 
 [![Dependency ci Status][dependencyci-image]][dependencyci-url]
